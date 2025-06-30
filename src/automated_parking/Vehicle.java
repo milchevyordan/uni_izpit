@@ -4,6 +4,11 @@ public abstract class Vehicle implements Charging, Volume {
     private Dimensions dimension;
     private Engine engine;
 
+    public Vehicle(double width, double length, Engine engine) {
+        this.dimension = new Dimensions(width, length);
+        this.engine = engine;
+    }
+
     public abstract String klaxon();
 
     @Override
